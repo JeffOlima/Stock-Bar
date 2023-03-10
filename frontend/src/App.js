@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 // Components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Container from './components/layout/Container';
 
 // Pages
 import Login from './components/pages/Auth/Login';
@@ -13,6 +14,7 @@ function App() {
   return (
    <Router>
     <Navbar />
+    <Container>
     <Switch>
       <Route path="/login">
       <Login />
@@ -24,6 +26,7 @@ function App() {
       <Home />
       </Route>
     </Switch>
+    </Container>
     <Footer />
    </Router>
   );
